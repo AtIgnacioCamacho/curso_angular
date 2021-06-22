@@ -1,0 +1,21 @@
+<h1>{{nombre}}</h1>
+<dl>
+    <td>Nombre:</td>
+    <dd>{{nombre}}</dd>
+
+    <td>Edad:</td>
+    <dd>{{edad}}</dd>
+
+    <td>Función:</td>
+    <dd>{{obtenerNombre()}}</dd>
+
+    
+    <td>Mayúsculas:</td>
+    <dd>{{nombre.toLocaleUpperCase()}}</dd>
+
+    <td>Mayúsculas-propiedad:</td>
+    <dd>{{nombreMayusculas}}</dd>
+<!--curioso , no hace falta &eacute, se cuajará an algún otro navegador-->
+    <button (click)='cambiarNombre()'>Cambiar Héroe</button>
+    <button (click)='cambiarEdad()'>Cambiar edad</button>
+</dl>
