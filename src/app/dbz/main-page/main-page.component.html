@@ -1,0 +1,22 @@
+<h1>Dragon Ball Z</h1>
+<hr>
+<div class="row">
+    <div class ="col">
+        <h3>Personajes:</h3><hr>
+        <ul *ngFor="let p of personajes">
+            <li>{{p.nombre}}-{{p.poder | number}}</li>
+        </ul>
+        <!--con ngRepeat probablemente tb funcione, pero no mete nada por defecto, habría que ver si hay control específico de tabla-->
+        <!-- el pipe con number detras marca a angular q saque como numero, me saca notación americana, sin embargo. Probablemente se pueda cambiar, ya sea por estilos o con alguna propiedad-->
+    </div>
+    <div class ="col">
+        <h3>Agregar:</h3>
+        <hr>
+        <form (ngSubmit)="agregar( )" >
+            <input type="text" placeholder="Nombre" name= "nombre" [(ngModel)]= "nuevo.nombre"/>
+            <!-- [value]="nuevo.nombre" (input)="cambiarNombre($event)" -->
+            <input type="number" placeholder="Poder" name="poder" [(ngModel)]="nuevo.poder"/>
+            <button type="submit">Agregar</button>
+        </form>
+    </div>
+</div>

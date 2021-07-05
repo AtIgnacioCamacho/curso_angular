@@ -9,10 +9,12 @@ import { HeroesModule } from './heroes/heroes.module';
 //Tarea: crear un móodulo ContadorModule que contenga ContadorComponent 
 //al no tener digectivas ng no haría falta Commonmodule
 import { ContadorModule } from './contador/contador.module';
+import { DbzModule } from './dbz/dbz.module';
 
 @NgModule({
   declarations: [
-    AppComponent,/*
+    AppComponent, 
+    /*
     ContadorComponent ,
     HeroeComponent,
     ListadoComponent */
@@ -20,7 +22,8 @@ import { ContadorModule } from './contador/contador.module';
   imports: [
     BrowserModule,
     HeroesModule,
-    ContadorModule
+    ContadorModule,
+    DbzModule
   ],
   providers: [],
   bootstrap: [AppComponent]
